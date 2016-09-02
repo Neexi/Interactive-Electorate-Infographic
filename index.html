@@ -1,0 +1,146 @@
+    <html>
+    <head>
+        <title>Raphael Play</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="mootools.1.4.2.js"></script>
+        <script type="text/javascript" src="raphael.js"></script>
+		<script type="text/javascript" src="g.raphael.js"></script>
+		<script type="text/javascript" src="g.pie.js"></script>
+		<script type="text/javascript" src="g.bar.js"></script>	
+        <script type="text/javascript" src="election_final_data_as_array.json"></script>
+        <script type="text/javascript" src="labour_swing.json"></script>
+        <script type="text/javascript" src="coaltion_swing.json"></script>
+        <!--<script type="text/Javascript" src="pan-zoom.js"></script>-->
+        <script type="text/javascript" src="draw.js"></script>	
+        <script type="text/javascript" src="raphael.json.js"></script>  
+        <script type="text/javascript" src="underscore.js"></script>
+        <script type="text/javascript" src="electorate_map.json"></script>
+        <script type="text/javascript" src="division_wining_party.json"></script>
+		
+<!--
+        <a id="map_pan_init" href="javascript:void(0)"> INIT </a>
+        <a id="map_zoom_plus" href="javascript:void(0)"> Zoom IN </a>
+        <a id="map_zoom_minus" href="javascript:void(0)"> Zoom OUT</a>
+        <a id="map_pan_up" href="javascript:void(0)"> UP </a>
+        <a id="map_pan_down" href="javascript:void(0)"> DOWN </a>
+        <a id="map_pan_left" href="javascript:void(0)"> LEFT </a>
+        <a id="map_pan_right" href="javascript:void(0)"> RIGHT </a>
+-->    <div id='pan' class='pan'>
+        <div class='wrapper'>
+        <a id='home' class='panner'>&#x2302</a>
+        <a id='left' class='panner'>&larr;</a>
+        <a id='right' class='panner'>&rarr;</a>
+        <a id='down' class='panner'>&darr;</a>
+        <a id='up' class='panner'>&uarr;</a>
+        <a id='zoomin' class='panner'>+</a>
+        <a id='zoomout' class='panner'>-</a>
+        </div>
+        </div>
+  
+        <style type="text/css">
+        #canvasMap_container {
+        	width: 550px;
+        	height: 650px;
+        	border: 1px solid #aaa;
+        	background: #fff;
+        	
+        }
+		#canvasCard_container {
+			position:relative;
+			left:554px;
+			top:-652px;
+			width: 500px;
+			border: 1px solid #aaa;
+			
+		}
+		#canvasBar_container {
+			position:relative;
+			left:978px;
+			top:-1302px;
+		    width: 500px;
+		    border: 1px solid #aaa;
+		}
+		#canvasPie_container {
+			position:relative;
+			left:978px;
+			top:-1302px;
+			width: 500px;
+			border: 1px solid #aaa;
+		}
+
+		#pan {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 999;
+        }
+
+        .wrapper {
+        position: relative;
+        }
+
+    #pan .wrapper .panner {
+    background: #fff;
+    top: 0;
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    -webkit-user-select: none;
+}
+        #pan .panner#home {
+        top: -35px;
+        left: 30px;
+        }
+
+		#pan .panner#left {
+        top: 35px;
+        }
+
+        #pan .panner#right {
+        top: 35px;
+        left: 60px;
+        }
+
+        #pan .panner#down {
+        top: 70px;
+        left: 30px;
+        }
+
+        #pan .panner#up {
+        top: 0px;
+        left: 30px;
+        }
+		
+		#pan .panner#zoomin {
+        top: 110px;
+        left: 30px;
+        }
+        
+		#pan .panner#zoomout {
+        top: 145px;
+        left: 30px;
+        }
+		
+		
+
+			
+        </style>
+    </head>
+    <body>
+
+        <div id="canvasMap_container"></div>
+        <div id="canvasCard_container"></div>
+        <div id="canvasBar_container"></div>
+        <div id="canvasPie_container"></div>
+
+    <script type="text/Javascript">
+    
+        </script>    
+		<script type="text/javascript" src="pan-zoom.js"></script>
+    </body>
+</html>
